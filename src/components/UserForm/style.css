@@ -1,0 +1,54 @@
+body{
+    padding: 20px 180px 20px 180px;
+    border: 1px solid ;
+}
+
+.ButtonContainerFooter :nth-child(2){
+    margin-left: 65%;
+    border:1px solid
+}
+.page{
+    padding-top: 50px;
+    padding: 50px;
+}
+
+.boxofGenter{
+    display: block;
+}
+
+.dataGenderContainer{
+    margin: 0 auto 0 auto;
+    width: 79%;
+    height: 100px;
+    padding: 2px;
+    box-sizing: border-box;
+    display: flex;
+}
+.dateGdiv{
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+
+}
+
+/* summary page  */
+
+.summaryHeader{
+    /* border: 1px solid; */
+    margin: 0;
+}
+
+.dataTable{
+    /* border: 1px solid; */
+    display:  flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.dataTable p{
+    /* border: 1px solid; */
+    width: 50%;
+    box-sizing: border-box;
+    margin: 2px 0px 2px 0px;
+
+}
