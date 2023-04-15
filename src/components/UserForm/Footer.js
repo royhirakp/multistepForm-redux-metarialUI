@@ -9,12 +9,13 @@ import obj from './Function/Functions';
 const Footer = () => {
   let pageNo = useSelector(s=>s.pageNo)
   let formData = useSelector(s=>s.fromData)
-  let errors = useSelector(s=>s.FromErrorSlice)
+  // let errors = useSelector(s=>s.FromErrorSlice)
 
-  const { firstName, lastName, email, password ,
+  const { firstName, lastName, email, 
+    // password ,
     EducationLevel, EmployementLeEL, AnnualIncome, 
     maritalStatus} = formData
-  const { firstNameError, lastNameError, emailError, passwordError } = errors
+  // const { firstNameError, lastNameError, emailError, passwordError } = errors
   // console.log(firstNameError, lastNameError, emailError, passwordError)
   // console.log(errors, " form the footer element ")
   const dispatch = useDispatch();

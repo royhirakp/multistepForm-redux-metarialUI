@@ -1,6 +1,6 @@
 function ValidateEmail(mail) 
 {
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
+ if (/^\w+([-]?\w+)*@\w+([-]?\w+)*(\w{2,3})+$/.test(mail))
   {
     return (true)
   }
@@ -11,6 +11,8 @@ function ValidateEmail(mail)
 let obj = {
     ValidateEmail
 }
+
+console.log('mail')
 export default obj
 
 
