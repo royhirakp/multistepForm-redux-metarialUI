@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setData } from '../../Store/slice/FormSlice';
 import { setErrorData } from '../../Store/slice/FromErrorSlice';
 import obj from './Function/Functions';
+
 const Page1 = () => {
 
   const dispatch = useDispatch();
@@ -39,6 +40,7 @@ const Page1 = () => {
               if(e.target.value !== ""){
                 dispatch(setErrorData({ key: "firstName", data: false }))
               }}
+              
             dispatch(setData({ key: "firstName", data: e.target.value }))
           }}
           style={{ "color": "red" }} label="First name" variant="outlined" />

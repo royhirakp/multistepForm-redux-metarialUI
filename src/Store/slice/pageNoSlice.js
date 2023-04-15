@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const PageNoSlice = createSlice({
     name:"pageNoSlice",
-    initialState : 0,
+    initialState : 1,
     reducers :{
         nextPage(state, action){
             if(state < 4)
