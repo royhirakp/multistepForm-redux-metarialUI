@@ -7,7 +7,7 @@ const UserForm = () => {
   return (
     <div>
       <Header/>
-      
+
       <div className="page">
       <Page />
       </div>

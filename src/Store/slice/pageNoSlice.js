@@ -7,7 +7,7 @@ const PageNoSlice = createSlice({
         nextPage(state, action){
             if(state < 4)
             return(state = state + 1)
-        },
+        }, 
         prevPage(state, action){
             if(state > 0)
             return (state = state - 1)
