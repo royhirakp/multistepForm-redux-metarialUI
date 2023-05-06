@@ -5,7 +5,10 @@ function App() {
     <div className="App">
       <h1>Multi Step Form</h1>
       <UserForm />
-      <a href="https://github.com/royhirakp/multistepForm-redux-metarialUI">
+      <a
+        href="https://github.com/royhirakp/multistepForm-redux-metarialUI"
+        target="blank"
+      >
         source Code
       </a>
     </div>
