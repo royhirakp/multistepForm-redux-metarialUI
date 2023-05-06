@@ -9,13 +9,15 @@ import obj from './Function/Functions';
 const Footer = () => {
   let pageNo = useSelector(s=>s.pageNo)
   let formData = useSelector(s=>s.fromData)
-  // let errors = useSelector(s=>s.FromErrorSlice)
+  let errors = useSelector(s=>s.FromErrorSlice)
 
   const { firstName, lastName, email, 
-    // password ,
+    password ,
     EducationLevel, EmployementLeEL, AnnualIncome, 
     maritalStatus} = formData
-  // const { firstNameError, lastNameError, emailError, passwordError } = errors
+  const { firstNameError, lastNameError, emailError, passwordError ,
+    EducationLevelError, EmployementLeELError, AnnualIncomeError, maritalStatusError
+  } = errors
   // console.log(firstNameError, lastNameError, emailError, passwordError)
   // console.log(errors, " form the footer element ")
   const dispatch = useDispatch();
@@ -30,17 +32,24 @@ const Footer = () => {
         if(lastName.trim() === "")  dispatch(setErrorData({key: "lastName", data: true}))
         if(!obj.ValidateEmail(email.trim()))  dispatch(setErrorData({key: "email", data: true}))
         // console.log('page no 1 if condition for =m the date oif ')
+        if(firstName !== "" && lastName !=="" && email !== "" && password !== ""
+        && !firstNameError && !lastNameError && !emailError ){
+          if(pageNo < 4)  dispatch(setPage(pageNo+1))
+        }
       }else if(pageNo === 2){
-
+        if(pageNo < 4)  dispatch(setPage(pageNo+1))
       }else if(pageNo === 3){
         if(EducationLevel.trim() === "") dispatch(setErrorData({key: "EducationLevel", data: true}))
         if(EmployementLeEL.trim() === "") dispatch(setErrorData({key: "EmployementLeEL", data: true}))
         if(AnnualIncome.trim() === "") dispatch(setErrorData({key: "AnnualIncome", data: true}))
-        if(maritalStatus.trim() === "") dispatch(setErrorData({key: "maritalStatus", data: true}))        
+        if(maritalStatus.trim() === "") dispatch(setErrorData({key: "maritalStatus", data: true}))   
+        if(  EducationLevel !== "" && EmployementLeEL !== "" && AnnualIncome !== "" && maritalStatus !== "" &&
+          !EducationLevelError && !EmployementLeELError && !AnnualIncomeError&& !maritalStatusError){
+          if(pageNo < 4)  dispatch(setPage(pageNo+1))   
+        }
+  
       }
 
-
-      if(pageNo < 4)  dispatch(setPage(pageNo+1))
     }
   }
 

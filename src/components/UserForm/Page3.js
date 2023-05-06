@@ -53,7 +53,8 @@ const Page3 = () => {
           {...{ error: EmployementLeELError, helperText: EmployementLeELError ? "Can't be Empty" :"" }}
           value={EmployementLeEL}
           onChange={(e) => {
-            if(EducationLevelError){
+            // console.log(EducationLevelError)
+            if(EmployementLeELError){
               if(e.target.value !== ""){
                 dispatch(setErrorData({ key: "EmployementLeEL", data: false }))
               }}
