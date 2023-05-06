@@ -4,6 +4,7 @@ function App() {
   return (
     <div className="App">
       <h1>Multi Step Form</h1>
+      <p>react , metarial ui, redux </p>
       <UserForm />
       <a
         href="https://github.com/royhirakp/multistepForm-redux-metarialUI"
